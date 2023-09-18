@@ -56,16 +56,25 @@
 
                 <div class="col-sm-6 col-md-4">
                     
-                    <a href="http://localhost:8080/teams/<?= $team['id'] ?>">
+                    <!-- Substitua as interrogações por "<?= $team['id'] ?>" -->
+                    <!-- Isso vai gerar um link para cada time especificando-se o ID -->
+                    <a href="http://localhost:8080/teams/???">
+                        
+                        <!-- Substitua as interrogações por "cor" -->
                         <div class="profile-card-5"  style="background: <?= $team['cor'] ?>">
 
                             <div class="row">
                                 <div class="col-7">
-                                    <div class="profile-name"><?= $team['selecao'] ?></div>
-                                    <div class="profile-abrev"><?= $team['abrev'] ?></div>
+                                    
+                                    <!-- Substitua as interrogações por "selecao" -->
+                                    <div class="profile-name"><?= $team['???'] ?></div>
+
+                                    <!-- Substitua as interrogações por "abrev" -->
+                                    <div class="profile-abrev"><?= $team['???'] ?></div>
 
                                     <div class="profile-group">
-                                        <span>grupo </span> <?= $team['grupo'] ?>
+                                        <!-- Substitua as interrogações por "grupo" -->
+                                        <span>grupo </span> <?= $team['???'] ?>
                                     </div>
                                 </div>
                                 <div class="col-5">

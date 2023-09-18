@@ -25,10 +25,14 @@ class TeamRepository {
     }
 
     public function getById(int $id){
-        $sql = "SELECT * FROM tb_selecoes WHERE id = :id";
+
+        //substitua TODAS as interrogações do método por id 
+
+
+        $sql = "SELECT * FROM tb_selecoes WHERE id = :???";
 
         $table = $this->connection->prepare($sql); 
-        $table->bindParam(":id", $id);
+        $table->bindParam(":???", $???);
 
         $table->execute();
 

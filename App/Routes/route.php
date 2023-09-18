@@ -21,12 +21,14 @@ $app = new App($settings);
  // Register component on container
  $container['view'] = new PhpRenderer(__DIR__ . "/../Views/");
 
-$app->get('/', PlayerController::class . ":getAll");
+//Adicione suas rotas aqui!
+$app->get('/', HomeController::class . ":home");
 $app->get('/teams', TeamController::class . ":getAll");
 $app->get('/teams/{id}', TeamController::class . ":getById");
 
+$app->get('/players/{id}', PlayerController::class . ":getById");
+$app->get('/players/name/{name}', PlayerController::class . ":getByName");
 
-
-$app->get('/teste', ConnectionTest::class . ":test");
+$app->get('/players/search/{search}', PlayerController::class . ":getBySearchParam");
 
 $app->run();

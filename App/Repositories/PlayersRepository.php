@@ -15,9 +15,9 @@ class PlayersRepository {
         $this->connection = $factory->getConnection();
     }
 
-    public function getAll(){
-        //$sql = "SELECT * FROM tb_jogadores";
-        $sql = "SELECT * FROM tb_jogadores as j INNER JOIN tb_selecoes as s ON j.selecao = s.id ORDER BY RAND() LIMIT 11";
+    public function getRandomPlayers(int $numberOfPlayers){
+
+        $sql = "SELECT * FROM tb_jogadores as j INNER JOIN tb_selecoes as s ON j.selecao = s.id ORDER BY RAND() LIMIT $numberOfPlayers";
 
         $table = $this->connection->query($sql);
         return $table->fetchAll(PDO::FETCH_ASSOC);
@@ -36,47 +36,14 @@ class PlayersRepository {
         return $resultados;
     }
 
-    public function getByName(string $team_name){
-        $sql = "SELECT * FROM tb_teams WHERE team_name = :team_name";
+    public function getByName(string $nome){
+        $sql = "SELECT * FROM tb_jogadores WHERE nome = :nome";
 
         $table = $this->connection->prepare($sql); 
-        $table->bindParam(":team_name", $team_name);
+        $table->bindParam(":nome", $nome);
 
         $table->execute();
 
         return $table->fetch(PDO::FETCH_ASSOC);
-    }
-
-    public function getByGroup(string $group){
-        $sql = "SELECT * FROM tb_teams WHERE tb_teams.group = :team_group";
-        
-        $table = $this->connection->prepare($sql); 
-        $table->bindParam(":team_group", $group);
-
-        $table->execute();
-
-        return $table->fetchAll(PDO::FETCH_ASSOC);
-    }
-
-    public function getByTeamId(int $id){
-        $sql = "SELECT * FROM tb_jogadores WHERE tb_jogadores.selecao = :id";
-        
-        $table = $this->connection->prepare($sql); 
-        $table->bindParam(":id", $id);
-
-        $table->execute();
-
-        return $table->fetchAll(PDO::FETCH_ASSOC);
-    }
-
-    public function create(string $texto){
-
-        $sql = "INSERT INTO tb_teams (???) VALUES('$texto')";
-
-        $statement = $this->connection->exec($sql);
-
-        $id = $this->connection->lastInsertId();
-
-        return $id;
     }
 }

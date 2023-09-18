@@ -63,11 +63,7 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
-
-            
-
 
                 <?php foreach ($players as $player) : ?>
 
