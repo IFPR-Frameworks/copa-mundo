@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,300&display=swap');
+
+@font-face {
+  font-family: Qatar2022;
+  src: url(./../fonts/qatar2022/Qatar2022-Medium.otf);
+}
+
+body {
+	width: 100%;
+	background: #9d0c35;
+	background: radial-gradient(circle, rgb(157, 12, 53) 0%, rgb(69, 1, 24) 100%)
+}
+
+.title {
+  color: #fff;
+  font-family: Qatar2022;
+  text-align: center;
+  margin: 35px 0 15px 0;
+}
+
+.subtitle {
+    color: #fff;
+    font-family: Qatar2022;
+    text-align: center;
+    margin: 10px 0;
+  }
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 25px;
+  margin-top: 20px;
+}
+
+.logo {
+  display: block;
+  width: 170px;
+  height: 80px;
+  background-image: url('../public/logo_qatar.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.nav-link {
+  color: #fff;
+}

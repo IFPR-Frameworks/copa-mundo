@@ -1,0 +1,82 @@
+
+
+.listar-figurinhas {
+
+}
+
+.figurinha {
+  height: 250px;
+  overflow: hidden;
+
+  text-align: center;
+
+  font-family: Qatar2022;
+  background: #fff;
+  box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.62);
+
+}
+
+.border_coners {
+  padding: 5px;
+  background:
+    linear-gradient(to right, #fff 5px, transparent 5px) 0 0,
+    linear-gradient(to right, #fff 5px, transparent 5px) 0 100%,
+    linear-gradient(to left, #fff 5px, transparent 5px) 100% 0,
+    linear-gradient(to left, #fff 5px, transparent 5px) 100% 100%,
+    linear-gradient(to bottom, #fff 5px, transparent 5px) 0 0,
+    linear-gradient(to bottom, #fff 5px, transparent 5px) 100% 0,
+    linear-gradient(to top, #fff 5px, transparent 5px) 0 100%,
+    linear-gradient(to top, #fff 5px, transparent 5px) 100% 100%;
+  background-repeat: no-repeat;
+  background-size: 50px 50px;
+  margin-bottom: 25px;
+}
+
+.figurinha .sticker {
+  display: inline-block;
+  max-width: 55%;
+  height: auto;
+  margin: 22px 0;
+  clear: both;
+}
+
+.figurinha .fifa_code {
+  background: #8E1735;
+  color: #fff;
+  font-size: 80%;
+  width: 45px;
+  margin: 0 auto;
+  margin-top: -3px;
+}
+
+.figurinha .name {
+  position: relative;
+  color: #fff;
+  background: #8E1735;
+  border-bottom: solid 4px #372C3C;
+  padding: 5px;
+  max-width: 80%;
+  margin: -10px auto 0px auto;
+}
+
+.name::before {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  background: #8E1735;
+  position: absolute;
+  left: -5px;
+  top: 12px
+}
+
+.name::after {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  background: #8E1735;
+  position: absolute;
+  right: -5px;
+  top: 12px
+}
