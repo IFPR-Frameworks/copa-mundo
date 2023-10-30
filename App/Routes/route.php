@@ -26,9 +26,4 @@ $app->get('/', HomeController::class . ":home");
 $app->get('/teams', TeamController::class . ":getAll");
 $app->get('/teams/{id}', TeamController::class . ":getById");
 
-$app->get('/players/{id}', PlayerController::class . ":getById");
-$app->get('/players/name/{name}', PlayerController::class . ":getByName");
-
-$app->get('/players/search/{search}', PlayerController::class . ":getBySearchParam");
-
 $app->run();
